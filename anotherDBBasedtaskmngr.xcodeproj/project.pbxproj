@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F01E1CD20FD034600AFE7C3 /* KPITasksTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01E1CC20FD034600AFE7C3 /* KPITasksTable.m */; };
+		2F16CB7120FC96BF00B69567 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F16CB7020FC96BF00B69567 /* CoreData.framework */; };
+		2F9215BC20FF5A70009AE9AF /* dataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9215BB20FF5A70009AE9AF /* dataManager.m */; };
+		2FCB78FC20FE119300105F57 /* coreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB78FB20FE119300105F57 /* coreDataManager.m */; };
+		2FCB790020FE2DFB00105F57 /* KPITaskTable.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F01E1BB20FCE9D600AFE7C3 /* KPITaskTable.xcdatamodeld */; };
+		DA2DD99A20F69FC800B52EB6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2DD99920F69FC800B52EB6 /* libsqlite3.tbd */; };
+		DAA2CEB720F6938000B190C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2CEB620F6938000B190C7 /* AppDelegate.m */; };
+		DAA2CEBD20F6938000B190C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA2CEBB20F6938000B190C7 /* Main.storyboard */; };
+		DAA2CEBF20F6938200B190C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA2CEBE20F6938200B190C7 /* Assets.xcassets */; };
+		DAA2CEC220F6938200B190C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA2CEC020F6938200B190C7 /* LaunchScreen.storyboard */; };
+		DAA2CEC520F6938200B190C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2CEC420F6938200B190C7 /* main.m */; };
+		DAA2CECD20F694FF00B190C7 /* LIstOfAllTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2CECC20F694FF00B190C7 /* LIstOfAllTasks.m */; };
+		DAA2CED020F698BE00B190C7 /* TaskItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2CECF20F698BE00B190C7 /* TaskItem.m */; };
+		DAA2CED420F698FF00B190C7 /* dbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2CED320F698FF00B190C7 /* dbManager.m */; };
+		DAA2CED720F6992700B190C7 /* editingTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2CED620F6992700B190C7 /* editingTaskViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F01E1BC20FCE9D600AFE7C3 /* KPITaskTable.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KPITaskTable.xcdatamodel; sourceTree = "<group>"; };
+		2F01E1CB20FD034600AFE7C3 /* KPITasksTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPITasksTable.h; sourceTree = "<group>"; };
+		2F01E1CC20FD034600AFE7C3 /* KPITasksTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPITasksTable.m; sourceTree = "<group>"; };
+		2F16CB7020FC96BF00B69567 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2F9215BA20FF5A70009AE9AF /* dataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dataManager.h; sourceTree = "<group>"; };
+		2F9215BB20FF5A70009AE9AF /* dataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dataManager.m; sourceTree = "<group>"; };
+		2FCB78FA20FE119300105F57 /* coreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coreDataManager.h; sourceTree = "<group>"; };
+		2FCB78FB20FE119300105F57 /* coreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coreDataManager.m; sourceTree = "<group>"; };
+		DA2DD99920F69FC800B52EB6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DAA2CEB220F6938000B190C7 /* anotherDBBasedtaskmngr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = anotherDBBasedtaskmngr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA2CEB520F6938000B190C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAA2CEB620F6938000B190C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAA2CEBC20F6938000B190C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAA2CEBE20F6938200B190C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAA2CEC120F6938200B190C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAA2CEC320F6938200B190C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA2CEC420F6938200B190C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAA2CECB20F694FF00B190C7 /* LIstOfAllTasks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LIstOfAllTasks.h; sourceTree = "<group>"; };
+		DAA2CECC20F694FF00B190C7 /* LIstOfAllTasks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LIstOfAllTasks.m; sourceTree = "<group>"; };
+		DAA2CECE20F698BE00B190C7 /* TaskItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskItem.h; sourceTree = "<group>"; };
+		DAA2CECF20F698BE00B190C7 /* TaskItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskItem.m; sourceTree = "<group>"; };
+		DAA2CED220F698FF00B190C7 /* dbManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dbManager.h; sourceTree = "<group>"; };
+		DAA2CED320F698FF00B190C7 /* dbManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dbManager.m; sourceTree = "<group>"; };
+		DAA2CED520F6992700B190C7 /* editingTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = editingTaskViewController.h; sourceTree = "<group>"; };
+		DAA2CED620F6992700B190C7 /* editingTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = editingTaskViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAA2CEAF20F6938000B190C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F16CB7120FC96BF00B69567 /* CoreData.framework in Frameworks */,
+				DA2DD99A20F69FC800B52EB6 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F01E1CA20FD031F00AFE7C3 /* forCoreDataSubclass */ = {
+			isa = PBXGroup;
+			children = (
+				2F01E1CB20FD034600AFE7C3 /* KPITasksTable.h */,
+				2F01E1CC20FD034600AFE7C3 /* KPITasksTable.m */,
+			);
+			name = forCoreDataSubclass;
+			sourceTree = "<group>";
+		};
+		2F9215B620FF5A23009AE9AF /* databaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				2F9215B720FF5A2D009AE9AF /* Common */,
+				2F9215B820FF5A39009AE9AF /* SQLite */,
+				2F9215B920FF5A44009AE9AF /* CoreData */,
+			);
+			name = databaseManager;
+			sourceTree = "<group>";
+		};
+		2F9215B720FF5A2D009AE9AF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2F9215BA20FF5A70009AE9AF /* dataManager.h */,
+				2F9215BB20FF5A70009AE9AF /* dataManager.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		2F9215B820FF5A39009AE9AF /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				DAA2CED220F698FF00B190C7 /* dbManager.h */,
+				DAA2CED320F698FF00B190C7 /* dbManager.m */,
+			);
+			name = SQLite;
+			sourceTree = "<group>";
+		};
+		2F9215B920FF5A44009AE9AF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2FCB78FA20FE119300105F57 /* coreDataManager.h */,
+				2FCB78FB20FE119300105F57 /* coreDataManager.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		2FCB78FD20FE1FBB00105F57 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAA2CECB20F694FF00B190C7 /* LIstOfAllTasks.h */,
+				DAA2CECC20F694FF00B190C7 /* LIstOfAllTasks.m */,
+				DAA2CED520F6992700B190C7 /* editingTaskViewController.h */,
+				DAA2CED620F6992700B190C7 /* editingTaskViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DA2DD99820F69FC800B52EB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F16CB7020FC96BF00B69567 /* CoreData.framework */,
+				DA2DD99920F69FC800B52EB6 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAA2CEA920F6938000B190C7 = {
+			isa = PBXGroup;
+			children = (
+				2F01E1BB20FCE9D600AFE7C3 /* KPITaskTable.xcdatamodeld */,
+				DAA2CEB420F6938000B190C7 /* anotherDBBasedtaskmngr */,
+				DAA2CEB320F6938000B190C7 /* Products */,
+				DA2DD99820F69FC800B52EB6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DAA2CEB320F6938000B190C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAA2CEB220F6938000B190C7 /* anotherDBBasedtaskmngr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAA2CEB420F6938000B190C7 /* anotherDBBasedtaskmngr */ = {
+			isa = PBXGroup;
+			children = (
+				2F9215B620FF5A23009AE9AF /* databaseManager */,
+				2FCB78FD20FE1FBB00105F57 /* ViewControllers */,
+				2F01E1CA20FD031F00AFE7C3 /* forCoreDataSubclass */,
+				DAA2CED120F698D300B190C7 /* customClasses */,
+				DAA2CEB520F6938000B190C7 /* AppDelegate.h */,
+				DAA2CEB620F6938000B190C7 /* AppDelegate.m */,
+				DAA2CEBB20F6938000B190C7 /* Main.storyboard */,
+				DAA2CEBE20F6938200B190C7 /* Assets.xcassets */,
+				DAA2CEC020F6938200B190C7 /* LaunchScreen.storyboard */,
+				DAA2CEC320F6938200B190C7 /* Info.plist */,
+				DAA2CEC420F6938200B190C7 /* main.m */,
+			);
+			path = anotherDBBasedtaskmngr;
+			sourceTree = "<group>";
+		};
+		DAA2CED120F698D300B190C7 /* customClasses */ = {
+			isa = PBXGroup;
+			children = (
+				DAA2CECE20F698BE00B190C7 /* TaskItem.h */,
+				DAA2CECF20F698BE00B190C7 /* TaskItem.m */,
+			);
+			name = customClasses;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAA2CEB120F6938000B190C7 /* anotherDBBasedtaskmngr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA2CEC820F6938200B190C7 /* Build configuration list for PBXNativeTarget "anotherDBBasedtaskmngr" */;
+			buildPhases = (
+				DAA2CEAE20F6938000B190C7 /* Sources */,
+				DAA2CEAF20F6938000B190C7 /* Frameworks */,
+				DAA2CEB020F6938000B190C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = anotherDBBasedtaskmngr;
+			productName = anotherDBBasedtaskmngr;
+			productReference = DAA2CEB220F6938000B190C7 /* anotherDBBasedtaskmngr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAA2CEAA20F6938000B190C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = paul;
+				TargetAttributes = {
+					DAA2CEB120F6938000B190C7 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = DAA2CEAD20F6938000B190C7 /* Build configuration list for PBXProject "anotherDBBasedtaskmngr" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAA2CEA920F6938000B190C7;
+			productRefGroup = DAA2CEB320F6938000B190C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAA2CEB120F6938000B190C7 /* anotherDBBasedtaskmngr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAA2CEB020F6938000B190C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA2CEC220F6938200B190C7 /* LaunchScreen.storyboard in Resources */,
+				DAA2CEBF20F6938200B190C7 /* Assets.xcassets in Resources */,
+				DAA2CEBD20F6938000B190C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAA2CEAE20F6938000B190C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA2CEB720F6938000B190C7 /* AppDelegate.m in Sources */,
+				DAA2CED720F6992700B190C7 /* editingTaskViewController.m in Sources */,
+				2FCB790020FE2DFB00105F57 /* KPITaskTable.xcdatamodeld in Sources */,
+				2FCB78FC20FE119300105F57 /* coreDataManager.m in Sources */,
+				DAA2CED420F698FF00B190C7 /* dbManager.m in Sources */,
+				2F01E1CD20FD034600AFE7C3 /* KPITasksTable.m in Sources */,
+				DAA2CECD20F694FF00B190C7 /* LIstOfAllTasks.m in Sources */,
+				DAA2CEC520F6938200B190C7 /* main.m in Sources */,
+				2F9215BC20FF5A70009AE9AF /* dataManager.m in Sources */,
+				DAA2CED020F698BE00B190C7 /* TaskItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DAA2CEBB20F6938000B190C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA2CEBC20F6938000B190C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAA2CEC020F6938200B190C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA2CEC120F6938200B190C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAA2CEC620F6938200B190C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DAA2CEC720F6938200B190C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAA2CEC920F6938200B190C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RF896M5NY7;
+				INFOPLIST_FILE = anotherDBBasedtaskmngr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = paul.anotherDBBasedtaskmngr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAA2CECA20F6938200B190C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RF896M5NY7;
+				INFOPLIST_FILE = anotherDBBasedtaskmngr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = paul.anotherDBBasedtaskmngr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAA2CEAD20F6938000B190C7 /* Build configuration list for PBXProject "anotherDBBasedtaskmngr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA2CEC620F6938200B190C7 /* Debug */,
+				DAA2CEC720F6938200B190C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAA2CEC820F6938200B190C7 /* Build configuration list for PBXNativeTarget "anotherDBBasedtaskmngr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA2CEC920F6938200B190C7 /* Debug */,
+				DAA2CECA20F6938200B190C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F01E1BB20FCE9D600AFE7C3 /* KPITaskTable.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F01E1BC20FCE9D600AFE7C3 /* KPITaskTable.xcdatamodel */,
+			);
+			currentVersion = 2F01E1BC20FCE9D600AFE7C3 /* KPITaskTable.xcdatamodel */;
+			path = KPITaskTable.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DAA2CEAA20F6938000B190C7 /* Project object */;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="KPITasksTable" representedClassName=".KPITasksTableClass" syncable="YES" codeGenerationType="class">
+        <attribute name="additionalInfoKPI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifireKPI" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="statementKPI" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="taskSubtitleKPI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taskTitleKPI" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="KPITasksTable" positionX="-56" positionY="258" width="128" height="120"/>
+    </elements>
+</model>
