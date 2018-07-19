@@ -79,9 +79,9 @@ static int MIN_LENGTH_OF_TITLE = 1;
             [self.database addItem:item];
         } else{
             
-            TaskItem* item = [[TaskItem alloc] init];
+            //TaskItem* item = [[TaskItem alloc] init];
             
-            item = self.recordToEdit;
+            TaskItem* item = self.recordToEdit;
             
             item.titleName = self.taskName.text;
             item.subtitleName = self.subtitle.text;

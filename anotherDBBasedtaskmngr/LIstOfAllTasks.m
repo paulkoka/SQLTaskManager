@@ -35,7 +35,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self loadView];
+    self.listOfTasks.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     // Do any additional setup after loading the view.
 }
 
@@ -71,8 +73,8 @@
 
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
     
-    TaskItem* temp = [[TaskItem alloc] init];
-    temp = [self.datacontainer objectAtIndex:indexPath.row];
+    //TaskItem* temp = [[TaskItem alloc] init];
+    TaskItem* temp = [self.datacontainer objectAtIndex:indexPath.row];
     self.recordToEdit = temp;
     [self performSegueWithIdentifier:@"idEdit" sender:self];
     
@@ -89,9 +91,9 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        TaskItem* item = [[TaskItem alloc] init];
+       // TaskItem* item = [[TaskItem alloc] init];
         
-        item = [self.datacontainer objectAtIndex:indexPath.row];
+        TaskItem* item = [self.datacontainer objectAtIndex:indexPath.row];
         
         self.recordToEdit = item;
         

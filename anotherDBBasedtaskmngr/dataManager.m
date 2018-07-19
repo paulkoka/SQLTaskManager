@@ -33,6 +33,10 @@
 
 -(NSMutableArray*) downloadDataFromBase{
     if (_dataFrom == fromCoreData) {
+       
+        
+        
+        
         return [self downloadDataFromCoreData];
     }
     else{
@@ -42,8 +46,7 @@
 
 -(void) deliteItem:(TaskItem*) item{
     
-    TaskItem* new= [[TaskItem alloc] init];
-    new = item;
+   
     
     [self deliteItemFromSQLite:item];
     [self deliteItemFromCoreData:item];
