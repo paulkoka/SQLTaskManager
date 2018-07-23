@@ -18,6 +18,11 @@ static int MIN_LENGTH_OF_TITLE = 1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.additionalInfo.layer.borderColor =[[UIColor lightGrayColor] CGColor];
+    [[self.additionalInfo layer] setBorderWidth:2.3];
+    [[self.additionalInfo layer] setCornerRadius:15];
+
     
     self.taskName.delegate = self;
     self.subtitle.delegate = self;
@@ -78,8 +83,7 @@ static int MIN_LENGTH_OF_TITLE = 1;
             
             [self.database addItem:item];
         } else{
-            
-            //TaskItem* item = [[TaskItem alloc] init];
+   
             
             TaskItem* item = self.recordToEdit;
             

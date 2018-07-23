@@ -10,7 +10,7 @@
 
 @implementation TaskItem
 
--(id) initWithUniqeId:(int) identifire withState:(BOOL) state title:(NSString*) title subtitle:(NSString*) subtitle additionalInformation:(NSString*)additionalInformation{
+-(id) initWithUniqeId:(int) identifire withState:(int) state title:(NSString*) title subtitle:(NSString*) subtitle additionalInformation:(NSString*)additionalInformation{
     if ((self = [super init])) {
         extern int TaskCount;
         TaskCount = identifire;
@@ -27,7 +27,9 @@
     if ((self = [super init])) {
         extern int TaskCount;
         ++TaskCount;
+        self.state = done;
         self.identifire = TaskCount;
+
     }
     return self;
 }

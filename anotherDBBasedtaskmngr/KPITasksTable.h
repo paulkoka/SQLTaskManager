@@ -12,7 +12,7 @@
 @interface KPITasksTable : NSManagedObject
 
 @property (nonatomic, assign) int identifire;
-@property (nonatomic) BOOL statement;
+@property (nonatomic, assign) int statement;
 
 @property (nonatomic, copy) NSString* taskTitle;
 @property (nonatomic, copy) NSString* taskSubtitle;

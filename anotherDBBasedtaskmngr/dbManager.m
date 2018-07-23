@@ -30,7 +30,7 @@ static NSString* const DB_NAME = @"tasks.db";
         
         // const char* sql_stmt = "drop table todoList";
         
-        const char* sql_stmt = "create table if not exists todoList (identifire INTEGER NOT NULL, statement BOOL DEFAULT YES, TaskTitle TEXT, taskSubtitle TEXT, additionalInfo TEXT)";
+        const char* sql_stmt = "create table if not exists todoList (identifire INTEGER NOT NULL, statement INTEGER, TaskTitle TEXT, taskSubtitle TEXT, additionalInfo TEXT)";
         
         if (sqlite3_exec(database, sql_stmt, NULL, NULL, &errMSG) == SQLITE_OK) {
          
@@ -71,7 +71,7 @@ static NSString* const DB_NAME = @"tasks.db";
        
         char* errMSG;
         
-        NSString* quiery = [NSString stringWithFormat:@"INSERT INTO todoList (identifire, TaskTitle, taskSubtitle, additionalInfo) VALUES ('%d', '%@', '%@', '%@')", item.identifire, item.titleName, item.subtitleName, item.additonalonfo];
+        NSString* quiery = [NSString stringWithFormat:@"INSERT INTO todoList (statement, identifire, TaskTitle, taskSubtitle, additionalInfo) VALUES ('%d', '%d', '%@', '%@', '%@')", item.state, item.identifire, item.titleName, item.subtitleName, item.additonalonfo];
         
         if (sqlite3_exec(database, [quiery UTF8String], NULL, NULL, &errMSG)== SQLITE_OK) {
             
@@ -97,7 +97,7 @@ static NSString* const DB_NAME = @"tasks.db";
 
 -(TaskItem*) addSeparateItemOnStatement:(sqlite3_stmt *) stmt{
     int uniqueID = sqlite3_column_int(stmt, 0);
-    BOOL state = (sqlite3_column_int(stmt, 1) == 0);
+    int state = (sqlite3_column_int(stmt, 1) == 0);
     char* titleChar = (char *) sqlite3_column_text(stmt, 2);
     char* subtitleChar = (char *) sqlite3_column_text(stmt, 3);
     char* additionalInfoChar = (char *) sqlite3_column_text(stmt, 4);
@@ -130,7 +130,7 @@ static NSString* const DB_NAME = @"tasks.db";
         
         char* errMSG;
         
-        NSString* quiery = [NSString stringWithFormat:@"update todoList SET taskTitle = '%@', taskSubtitle = '%@', additionalInfo = '%@' WHERE identifire = '%d'", item.titleName, item.subtitleName, item.additonalonfo,  item.identifire];
+        NSString* quiery = [NSString stringWithFormat:@"update todoList SET statement = '%d', taskTitle = '%@', taskSubtitle = '%@', additionalInfo = '%@' WHERE identifire = '%d'", item.state, item.titleName, item.subtitleName, item.additonalonfo,  item.identifire];
         
         sqlite3_exec(database, [quiery UTF8String], NULL, NULL, &errMSG);
      }

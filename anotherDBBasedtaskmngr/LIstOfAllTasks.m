@@ -31,6 +31,7 @@
 -(void) loadData{
     self.datacontainer = [self.database downloadDataFromBase];
     [self.listOfTasks reloadData];
+    [self.listOfTasks reloadSections:[NSIndexSet indexSetWithIndex:0 ] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)viewDidLoad {
@@ -63,17 +64,20 @@
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }
     
+
     TaskItem* temp = [self.datacontainer objectAtIndex:indexPath.row];
+
     
     cell.textLabel.text = temp.titleName;
     cell.detailTextLabel.text = temp.subtitleName;
+    
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
     
-    //TaskItem* temp = [[TaskItem alloc] init];
+
     TaskItem* temp = [self.datacontainer objectAtIndex:indexPath.row];
     self.recordToEdit = temp;
     [self performSegueWithIdentifier:@"idEdit" sender:self];
@@ -87,20 +91,20 @@
     editInfoViewController.dataFrom = self.database.dataFrom;
 }
 
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
-       // TaskItem* item = [[TaskItem alloc] init];
-        
-        TaskItem* item = [self.datacontainer objectAtIndex:indexPath.row];
-        
-        self.recordToEdit = item;
-        
-        [self.database deliteItem:item];
-        
-        [self loadData];
-    }
+
+- (UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UIContextualAction * delete =
+    [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive
+                                            title:@"Delete"
+                                          handler:^(UIContextualAction *  action,  UIView *  sourceView, void (^ _Nonnull completionHandler)(BOOL)) {
+                                              TaskItem* task = (TaskItem*)[self.datacontainer objectAtIndex:indexPath.row];
+                                              [self.database deliteItem:task];
+                                              [self loadData];
+                                              completionHandler(YES);
+                                          }];
+    UISwipeActionsConfiguration *swipe = [UISwipeActionsConfiguration configurationWithActions:@[delete]];
+    return swipe;
 }
 
 -(void)editingInfoWasFinished{

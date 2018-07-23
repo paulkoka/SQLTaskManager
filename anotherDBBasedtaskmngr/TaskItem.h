@@ -8,16 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum{
+    undone = 0,
+    done
+} stateInt;
+
 @interface TaskItem : NSObject
 
 @property (nonatomic, assign) int identifire;
-@property (nonatomic) BOOL state;
+@property (nonatomic, assign) int state;
 
 @property (nonatomic, copy) NSString* titleName;
 @property (nonatomic, copy) NSString* subtitleName;
 @property (nonatomic, copy) NSString* additonalonfo;
 
--(id) initWithUniqeId:(int) identifire withState:(BOOL) state title:(NSString*) title subtitle:(NSString*) subtitle additionalInformation:(NSString*)additionalInformation;
+-(id) initWithUniqeId:(int) identifire withState:(int) state title:(NSString*) title subtitle:(NSString*) subtitle additionalInformation:(NSString*)additionalInformation;
 
 -(id)initWithCustomId;
 

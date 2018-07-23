@@ -28,8 +28,9 @@ static NSString* EntityName = @"KPITasksTable";
 
 -(void) addItem:(TaskItem*)item{
     NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:EntityName inManagedObjectContext:self.managedObjectContext];
+    
     [managedObject setValue:[NSNumber numberWithInt: item.identifire] forKey:identifireS];
-    [managedObject setValue:[NSNumber numberWithBool:item.state] forKey:statementS];
+    [managedObject setValue:[NSNumber numberWithInt: item.state] forKey:statementS];
     [managedObject setValue:item.titleName forKey:taskTitleS];
     [managedObject setValue:item.subtitleName forKey:taskSubtitleS];
     [managedObject setValue:item.additonalonfo forKey:additionalInfoS];
@@ -56,7 +57,8 @@ static NSString* EntityName = @"KPITasksTable";
     NSArray *items = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     for (NSManagedObject *managedObject in items) {
         [managedObject setValue:[NSNumber numberWithInt: item.identifire] forKey:identifireS];
-        [managedObject setValue:[NSNumber numberWithBool:item.state] forKey:statementS];
+        [managedObject setValue:[NSNumber numberWithInt:item.state] forKey:statementS];
+
         [managedObject setValue:item.titleName forKey:taskTitleS];
         [managedObject setValue:item.subtitleName forKey:taskSubtitleS];
         [managedObject setValue:item.additonalonfo forKey:additionalInfoS];
@@ -75,7 +77,7 @@ static NSString* EntityName = @"KPITasksTable";
 
         TaskItem* item = [[TaskItem alloc]
                           initWithUniqeId:[[object valueForKey:identifireS] intValue]
-                          withState:[object valueForKey:statementS]
+                          withState:[[object valueForKey:statementS] intValue]
                           title:[object valueForKey:taskTitleS]
                           subtitle:[object valueForKey:taskSubtitleS]
                           additionalInformation:[object valueForKey:additionalInfoS]];

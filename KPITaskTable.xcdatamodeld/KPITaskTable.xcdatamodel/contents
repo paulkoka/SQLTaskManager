@@ -3,11 +3,11 @@
     <entity name="KPITasksTable" representedClassName="KPITasksTable" syncable="YES" codeGenerationType="category">
         <attribute name="additionalInfo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="identifire" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="statement" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="statement" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="taskSubtitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="taskTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="KPITasksTable" positionX="-63" positionY="0" width="128" height="120"/>
+        <element name="KPITasksTable" positionX="-63" positionY="0" width="128" height="118"/>
     </elements>
 </model>
